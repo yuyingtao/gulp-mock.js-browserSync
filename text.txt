@@ -1,0 +1,28 @@
+这是一个用gulp+mock.js+browerSync来实现前后端数据分离的前后端框架，让我们学起来吧。
+第一步，安装静态node,gulp
+安装步骤
+1 安装node（此处省略），打开终端npm init初始化项目
+2 安装gulp
+  npm install --save-dev gulp
+第二步安装静态服务器插件
+1 安装 browerSync静态服务器插件
+  npm install --save-dev gulp
+2 创建gulpfile.js文件
+browerSync的用处，第一点自动刷新页面，监听js，css文件的改变刷新页面，在我们调试的时候，更加方便
+搭建静态服务器，一般默认打开页面index.html
+var browserSync
+browserSync.init({
+       files:files,
+       server: {
+           baseDir: './',
+           middleware:middleware
+       }
+   } )
+第三步安装mock.js
+模拟后台数据，可以让我们在前端调试中使用模拟数据，只要把接口数据定义好，后期与后台联调的时候，只需要改变请求路径就可以了
+其实mock的原理非常简单，就是拦截请求“转发”到本地文件，所谓转发，其实就是读取本地mock文件，并以json或者script等格式返回给浏览器。
+在这里配合browerSync的中间件middleWare，就能够拦截ajax返回mock数据
+第一种
+直接在gulp文件里面模拟数据，因为学习这个这样做，更简单，不涉及文件处理。但是真正在项目中开发是不可取的，因为项目中的模拟数据很多，我们
+不可能全部都写在gulpfile文件里面，所以就需要用到接下来的方法，读取js文件的模拟数据，再返回数据
+第二种

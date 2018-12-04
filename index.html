@@ -9,8 +9,6 @@
 <!--mock.js 依赖jQuery和require.js-->
 <script src="js/jquery.js"></script>
 <script src="js/require.js"></script>
-<!--mock-main.js是mockJs的demo文件-->
-<!--<script src="js/mock.js"></script>-->
 111
 222
 22223232
@@ -20,13 +18,13 @@
 //       console.log(res)
 //   });
 // "hM5+O2rYRY9IoPLCWbMkx5KqjbRTh5AGQd7JRk84DxrsujvOVbaRLtWsjA9eAHj7v8j70Im4liFVvCCO7srzlBK78lllzsPkSHBwOhQUQUo5JlY8Y/+TsbrcCUUs7kny4e3sPidwKUTdN5GQ9nccdkPR+5zXApuoArUaS8pr8JODmI5JAqpVUYshcjfkqoQCbYJY74qtmc4XmFHfBkqL3Y4wmYUaTxBAqBpHBRnVUziXy7opHM2v2ITG3hpMTipeiHDl6QCsMb2ZIug4h7K5QIasmBn8lyM3HInFFMQJZDJeaMjBZqJh/44TMJt4RWqRjZHLMlW97wzGPchMyOiAnlS1nQEvf5ZavO8g8Na+uvH/fIXP7S+0CBNn52Jc7ImuH2QYB/b0XkKI34/RQKoO8ZQD+bK0XcO1rzd87CNlWfyQ1V7K/NuxVaghGN0VYwgsDTLRzPly/GkzO7DuvDGS0tyWIOlHwiSfi5n2I4VUH2JEbS6C87ito/4OAHTghWtgYGUIxied0ZubbecqO+5BRA=="
-    $.ajax({ url: "/login/loginIn.do",type:"post", data:{tokenId:"398527188426690560"}, success: function(res){
-      console.log(res);
-    }});
-//$.ajax({ url: "/login/loginIn.do",type:"post", data:{loginId:"18728404434",encryptedData:"hM5+O2rYRY9IoPLCWbMkx5KqjbRTh5AGQd7JRk84DxrsujvOVbaRLtWsjA9eAHj7v8j70Im4liFVvCCO7srzlBK78lllzsPkSHBwOhQUQUo5JlY8Y/+TsbrcCUUs7kny4e3sPidwKUTdN5GQ9nccdkPR+5zXApuoArUaS8pr8JODmI5JAqpVUYshcjfkqoQCbYJY74qtmc4XmFHfBkqL3Y4wmYUaTxBAqBpHBRnVUziXy7opHM2v2ITG3hpMTipeiHDl6QCsMb2ZIug4h7K5QIasmBn8lyM3HInFFMQJZDJeaMjBZqJh/44TMJt4RWqRjZHLMlW97wzGPchMyOiAnlS1nQEvf5ZavO8g8Na+uvH/fIXP7S+0CBNn52Jc7ImuH2QYB/b0XkKI34/RQKoO8ZQD+bK0XcO1rzd87CNlWfyQ1V7K/NuxVaghGN0VYwgsDTLRzPly/GkzO7DuvDGS0tyWIOlHwiSfi5n2I4VUH2JEbS6C87ito/4OAHTghWtgYGUIxied0ZubbecqO+5BRA==",
-//    iv:"G5fFY6NziRCEBScujo3Ctg==",requestType:2}, success: function(res){
-//    console.log(res);
-//}});
+    $.ajax({
+        url: "/login/loginIn.do",
+        type:"post",
+        data:{tokenId:"398527188426690560"},
+        success: function(res){
+             console.log(res);
+        }});
 </script>
 </body>
 </html>
